@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Livraria</title>
+</head>
+<body>
+    <div id="container">
+            <div id="menu">
+                <h2>Gerenciamento de Livros</h2>
+            </div>
+
+            <form action="">
+                <div id="main-form">
+                    <div class="itens">
+                        <label for="titulo">Título</label>
+                        <input type="text" placeholder="Digite o Título">
+                    </div>
+                    <div class="itens">
+                        <label for="autor">Autor</label>
+                        <input type="text" placeholder="Digite o Autor">
+                    </div>
+                    <div class="itens">
+                        <label for="categoria">Categoria</label>
+                        <select name="selecao">
+                            <option value="" disabled selected>Selecione a Categoria</option>
+                            <option value="drama">Drama</option>
+                            <option value="Ficcao">Ficção</option>
+                            <option value="romance">Romance</option>
+                            <option value="terror">Terror</option>
+                          </select>
+                    </div>
+                    <div class="itens">
+                        <label for="valor">Valor</label>
+                        <input type="text" placeholder="Digite o valor">
+                    </div>
+                </div>
+
+                <button type="submit" id="botao">Cadastrar</button>
+            </form>
+
+    </div>
+
+
+    <script src="js/script.js"></script>
+</body>
+</html>
