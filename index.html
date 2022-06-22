@@ -17,15 +17,17 @@
                 <div id="main-form">
                     <div class="itens">
                         <label for="titulo">Título</label>
-                        <input type="text" placeholder="Digite o Título">
+                        <input type="text" id="titulo" name="titulo" placeholder="Digite o Título">
                     </div>
+
                     <div class="itens">
                         <label for="autor">Autor</label>
-                        <input type="text" placeholder="Digite o Autor">
+                        <input type="text" id="autor" name="autor" placeholder="Digite o Autor">
                     </div>
+
                     <div class="itens">
                         <label for="categoria">Categoria</label>
-                        <select name="selecao">
+                        <select name="categoria" id="categoria">
                             <option value="" disabled selected>Selecione a Categoria</option>
                             <option value="drama">Drama</option>
                             <option value="Ficcao">Ficção</option>
@@ -33,13 +35,15 @@
                             <option value="terror">Terror</option>
                           </select>
                     </div>
+
                     <div class="itens">
                         <label for="valor">Valor</label>
-                        <input type="text" placeholder="Digite o valor">
+                        <input type="number" id="valor" name="valor" placeholder="Digite o valor">
                     </div>
+
                 </div>
 
-                <button type="submit" id="botao">Cadastrar</button>
+                <button id="botao" type="button" onclick="cadastrar()">Cadastrar</button>
             </form>
 
     </div>
