@@ -46,14 +46,22 @@ const cadastrar = () =>{
     .then(function(responce){
         responce.json().then(resposta=>{
             // aqui é onde iremos receber e tratar a resposta do php
-            Swal.fire(
-                'Bom Trabalho',
-                resposta.mensagem,
-                'success'
-              )
-
-            // resetar o formulario - limpar os campos
-            document.getElementById('form-cadastrar').reset()
+            if(resposta.Resposta =='OK'){
+                Swal.fire(
+                    'Bom Trabalho',
+                    resposta.mensagem,
+                    'success'
+                  )
+    
+                // resetar o formulario - limpar os campos
+                document.getElementById('form-cadastrar').reset()
+            }else{
+                Swal.fire(
+                    'ERRO',
+                    resposta.mensagem,
+                    'error'
+                )
+            }
         })
     })
 }
@@ -62,3 +70,11 @@ const cadastrar = () =>{
 // function Cadastrar(){
 
 // }
+
+//inicio da função listar
+
+const listar = ()=>{
+    fetch('backend/listar-livro.php')
+}
+
+//final da função listar
