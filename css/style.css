@@ -56,6 +56,8 @@ div.itens select{
     padding: 20px;
 }
 
+/* botão */
+
 #botao{
     display: block;
     margin: 20px auto 0 auto;
@@ -81,3 +83,43 @@ div.itens select{
 	position:relative;
 	top:1px;
 }
+
+.botao-comprar{
+    width: 100%;
+    background-color: #268a16;
+    color: #306108;
+    padding: 14px 20px;
+    margin: 8px auto;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    display: grid;
+    margin-top: 25px;
+}
+/* fim botão */
+
+/* lista livro */
+
+#lista-livro-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.mostra-livro{
+    width: 100%;
+    border: 2px black solid;
+    border-radius: 5px;
+    background-color: #594b4b;
+}
+
+.desc-mostra-livro{
+    padding: 10px;
+}
+
+.livro-img{
+    width: 100%;
+}
+
+/* fim lista livro */

@@ -75,6 +75,26 @@ const cadastrar = () =>{
 
 const listar = ()=>{
     fetch('backend/listar-livro.php')
+    .then(response => response.json())
+    .then(resposta =>{
+        // aqui será manipulado o HTML com os dados retornados pelo PHP em formati JSON
+        // O JS monta o HTML de forma dinamica, através de um laço(repetição)
+        for(let cont=0;cont<resposta.length;cont++){
+            document.getElementById('lista-livro-grid').innerHTML+=
+            `
+            <figure class="mostra-livro">
+                <img src="img/imagenotfound.png" alt="Imagem do livro" class="livro-img">
+                <figcaption class="desc-mostra-livro">
+                    <h4>${resposta[cont]['titulo']}</h4>
+                    <h5>${resposta[cont]['autor']}</h5>
+                     <small>${resposta[cont]['id_categorias']}</small>
+                     <h5>R$ ${resposta[cont]['valor']}</h5>
+                     <button class="botao-comprar">Comprar</button>
+                </figcaption>
+            </figure>
+            `
+        } 
+    })
 }
 
 //final da função listar
